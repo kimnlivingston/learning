@@ -1,3 +1,3 @@
 # learning
 All my notes for tech learning.
-- [cheat-sheet](\cheat-sheet.md)
+- [cheat-sheet](cheat-sheet.md)
