@@ -1,18 +1,4 @@
 **Cheat Sheet**
-===
-
-- [Cheat Sheet](#cheat-sheet)
-- [NIPRGPT Queries](#niprgpt-queries)
-  - [5 Bullet Points](#5-bullet-points)
-  - [Maintenance Summary](#maintenance-summary)
-- [UTIL\_AJAX](#util_ajax)
-  - [Package](#package)
-  - [Package Body](#package-body)
-- [AJAX](#ajax)
-- [XHR File Upload](#xhr-file-upload)
-- [Form Submit](#form-submit)
-- [DataTables](#datatables)
-- [Exception Clause](#exception-clause)
 
 # Grant Queries
 
@@ -327,3 +313,4 @@ htp.p('
 <!-- start DataTables javascript -->
 ');
 ```
+
