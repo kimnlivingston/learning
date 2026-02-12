@@ -327,11 +327,3 @@ htp.p('
 <!-- start DataTables javascript -->
 ');
 ```
-
-# Exception Clause
-
-``` sql
-exception when others then
-  ops$navsup_util.utility.capture_error();
-  exception_handler();
-```
