@@ -39,53 +39,63 @@
             background-color: #f0f8ff;
             transform: translateY(-2px);
         }
-        #status {
-            color: #888;
+        .instructions {
+            background-color: #fffbe5;
+            border: 1px solid #e6dbb3;
+            padding: 1rem;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
 
-    <h1>My Notes</h1>
-    <p id="status">Loading file list...</p>
+    <h1>My Notes Splash Page</h1>
+    <div class="instructions">
+        <strong>Note:</strong> To add or remove files from this list, you must manually edit the <code>index.html</code> file.
+    </div>
     <ul id="file-list"></ul>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const fileList = document.getElementById('file-list');
-            const status = document.getElementById('status');
 
-            // Fetch the list of files from our local server
-            fetch('')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(files => {
-                    if (files.length === 0) {
-                        status.textContent = "No markdown (.md) files found in this folder.";
-                        return;
-                    }
-                    
-                    status.style.display = 'none'; // Hide the loading status
+            // ===============================================================
+            // EDIT THIS LIST
+            // You must manually list all your markdown files here.
+            // ===============================================================
+            const markdownFiles = [
+                "javascript.md",
+                "plsql.md",
+                "programming_basics.md",
+                "python.md",
+                "sql.md",
+                "test-driven-development.md",
+            ];
+            // ===============================================================
 
-                    // Create a link for each file
-                    files.forEach(file => {
-                        const listItem = document.createElement('li');
-                        const link = document.createElement('a');
-                        link.href = file; // Link directly to the file
-                        link.textContent = file.replace('.md', ''); // Display without the extension
-                        listItem.appendChild(link);
-                        fileList.appendChild(listItem);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching file list:', error);
-                    status.innerHTML = "<strong>Failed to load files.</strong><br>Did you remember to run 'node server.js' in your terminal?";
-                    status.style.color = 'red';
-                });
+
+            const fileListElement = document.getElementById('file-list');
+
+            if (markdownFiles.length === 0) {
+                const listItem = document.createElement('li');
+                listItem.textContent = "No files listed. Edit index.html to add your notes.";
+                fileListElement.appendChild(listItem);
+                return;
+            }
+
+            // Generate a link for each file in the list
+            markdownFiles.forEach(file => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                
+                // Link directly to the local file
+                link.href = "./" + file; 
+                
+                // Make the link text cleaner (e.g., "My-First-Note.md" becomes "My-First-Note")
+                link.textContent = file.replace(/\.md$/i, '').replace(/[-_]/g, ' '); 
+                
+                listItem.appendChild(link);
+                fileListElement.appendChild(listItem);
+            });
         });
     </script>
 
