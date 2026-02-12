@@ -5,13 +5,13 @@
 
 executed without compiling first (runtime reads actual code, not bytecode)
 
-![](images/learning_programming_interpreted-vs-compiled.png)
+<img width="603" height="414" alt="image" src="https://github.com/user-attachments/assets/52db4dd9-17f8-4169-b36c-10a6dfa41805" />
 
 Source: [Blurred Lines: Is Ruby an interpreted language and what does that even mean? - medium.com](https://medium.com/@astermanuelg/blurred-lines-is-ruby-an-interpreted-language-2d3d6bca3d37)
 
 # Type System
 
-![](images/learning_programming_type-system.png)
+<img width="598" height="418" alt="image" src="https://github.com/user-attachments/assets/fbd610e1-3ea9-4b58-83f2-8343a1333874" />
 
 Source: [What is the difference between statically typed and dynamically typed languages? - stackoverflow.com](https://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages)
 
@@ -225,5 +225,6 @@ In this example:
 # Mutable vs Immutable
 
 Mutable can be changed. Immutable cannot.
+
 
 # Single Threaded vs Multithreaded
