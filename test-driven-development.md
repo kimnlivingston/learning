@@ -6,7 +6,7 @@
 
 ## Overview
 
-![TDD Steps: 1) write a test that fails, 2) write enough code to compile, and 3) complete code to meet requirements of test. Repeat as needed.](images/learning_test-driven-development_overview.png)
+<img width="624" height="288" alt="image" src="https://github.com/user-attachments/assets/15028491-5e7c-4756-8970-038d50020452" />
 
 - Testers have no bias toward code and often find defects that developers miss. Test driven reduces the bias that developers have by approaching the code from the perspective of they should implement to meet the test scenarios instead of building test scenarios that meet the code.
 - Can expose poorly designed monolithic code
@@ -24,3 +24,4 @@
 - Mockito
 - PowerMock
 - MOQ
+
